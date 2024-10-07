@@ -21,7 +21,7 @@
 from movies import movie_db
 from match import match
 from typing import List, Tuple, Callable, Any
-
+import random
 def match(pattern: List[str], source: List[str]) -> List[str]:
     """Attempts to match the pattern to the source.
 
@@ -266,6 +266,10 @@ def title_by_actor(matches: List[str]) -> List[str]:
             result.append(get_title(movie))
     return result
 
+def random_recommendation(useless: List[str]) -> str:
+    rand = random.randint(0,len(movie_db)-1)
+    movie = movie_db[rand]
+    return [get_title(movie)]
 
 # dummy argument is ignored and doesn't matter
 def bye_action(dummy: List[str]) -> None:
@@ -288,6 +292,7 @@ pa_list: List[Tuple[List[str], Callable[[List[str]], List[Any]]]] = [
     (str.split("when was % made"), year_by_title),
     (str.split("in what movies did % appear"), title_by_actor),
     (["bye"], bye_action),
+    (str.split("give me a random movie recommendation"), random_recommendation)
 ]
 
 
