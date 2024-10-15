@@ -14,6 +14,20 @@ from typing import List, Tuple
 
 movie_db: List[Tuple[str, str, int, List[str]]] = [
     (
+        "a goofy movie", 
+        "kevin lima",  
+        1995, 
+        [
+            "bill farmer",
+            "jason marsden",
+            "aaron lohr",
+            "jim cummings",
+            "kellie martin",
+            "rob paulsen",
+            "wallace shawn",
+        ],
+    ),
+    (
         "amarcord",  # title
         "federico fellini",  # director
         1974,  # year
