@@ -89,7 +89,7 @@ def match(pattern: List[str], source: List[str]) -> List[str]:
         else: 
             return None
 
-    return result
+        return result
 
 # The projection functions, that give us access to certain parts of a "movie" (a tuple)
 def get_title(movie: Tuple[str, str, int, List[str]]) -> str:
